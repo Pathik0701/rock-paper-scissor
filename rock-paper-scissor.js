@@ -29,33 +29,33 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
       let result = '';
 
-      if (playerMove === 'Scissors') {
+      if (playerMove === 'scissors') {
 
-        if (computerMove === 'Scissors') {
+        if (computerMove === 'scissors') {
           result = 'tie';
-        } else if (computerMove === 'Rock') {
+        } else if (computerMove === 'rock') {
           result = 'you lose!';
-        } else if (computerMove === 'Paper') {
+        } else if (computerMove === 'paper') {
           result = 'you won';
         }
 
-      } else if (playerMove === 'Paper') {
+      } else if (playerMove === 'paper') {
 
-        if (computerMove === 'Paper') {
+        if (computerMove === 'paper') {
           result = 'tie';
-        } else if (computerMove === 'Scissors') {
+        } else if (computerMove === 'scissors') {
           result = 'you lose!';
-        } else if (computerMove === 'Rock') {
+        } else if (computerMove === 'rock') {
           result = 'you won';
         }
 
-      } else if (playerMove === 'Rock') {
+      } else if (playerMove === 'rock') {
 
-        if (computerMove === 'Rock') {
+        if (computerMove === 'rock') {
           result = 'tie';
-        } else if (computerMove === 'Paper') {
+        } else if (computerMove === 'paper') {
           result = 'you lose!';
-        } else if (computerMove === 'Scissors') {
+        } else if (computerMove === 'scissors') {
           result = 'you won';
         }
       }
@@ -101,11 +101,11 @@ wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
       let computerMove = '';
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'Rock';
+        computerMove = 'rock';
       } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
-        computerMove = 'Paper';
+        computerMove = 'paper';
       } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-        computerMove = 'Scissors';
+        computerMove = 'scissors';
       }
 
       return computerMove;
