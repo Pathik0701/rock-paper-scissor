@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rock-paper-scissor.css">
+
+</head>
+
+<body>
+  <!-- when we click the button:
+      1) computer randomly select a move
+      2) compare the move to get the result
+      3) reset button
+      4) display the result in popup -->
+
+  <div class="heading">
+    <p class="title">Rock paper Scissors</p>
+  </div>
+
+  <div class="game-container">
+    <button onclick="
+    playGame('Rock');
+  " class="move-button">
+      <img src="rock-emoji.png" class="move-icon">
+    </button>
+
+
+    <button onclick="
+    playGame('Paper');
+  " class="move-button">
+      <img src="paper-emoji.png" class="move-icon">
+    </button>
+
+
+    <button onclick="
+    playGame('Scissors');
+  " class="move-button">
+      <img src="scissors-emoji.png" class="move-icon">
+    </button>
+  </div>
+
+  <div class="score-container">
+    <p class="js-result result">you win</p>
+    <p class="js-move"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score'); //it remove the score from the localstorage and return the value null to deal with it, we have to give the default value to the storage.
+    updateScoreElement(); 
+  " class="reset-score-button">Reset Score</button>
+  </div>
+
+  <script src="rock-paper-scissor.js"></script>
+</body>
+
+</html>
